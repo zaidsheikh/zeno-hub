@@ -46,3 +46,10 @@ services:
     ports:
       # Use a different port to avoid clashes with local postgres
       - "5431:5432"
+networks:
+  default:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.103.0.1/16
